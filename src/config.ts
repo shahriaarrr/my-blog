@@ -42,35 +42,48 @@ export const navBarConfig: NavBarConfig = {
     LinkPreset.Home,
     LinkPreset.Archive,
     LinkPreset.About,
-    {
-      name: 'GitHub',
-      url: 'https://github.com/saicaca/fuwari',     // Internal links should not include the base path, as it is automatically added
-      external: true,                               // Show an external link icon and will open in a new tab
-    },
+    // {
+    //   name: 'GitHub',
+    //   url: 'https://github.com/shahriaarrr',     // Internal links should not include the base path, as it is automatically added
+    //   external: true,                               // Show an external link icon and will open in a new tab
+    // },
   ],
 }
 
 export const profileConfig: ProfileConfig = {
   avatar: 'assets/images/avatar.png',  // Relative to the /src directory. Relative to the /public directory if it starts with '/'
   name: 'شهریار قاسم پور',
-  bio: 'به دفترچه یادداشت من خوش اومدی :) اینجا من قراره از تجربیات جدید و اتفاقاتی که داره میفته و کارهایی که میکنم بنویسم',
+  bio: 'به دفترچه نوشته های من خوش اومدی:)  اینجا من قراره از تجربیات جدید و اتفاقاتی که داره میفته و کارهایی که میکنم بنویسم',
   links: [
     {
-      name: 'Twitter',
-      icon: 'fa6-brands:twitter',       // Visit https://icones.js.org/ for icon codes
-                                        // You will need to install the corresponding icon set if it's not already included
-                                        // `pnpm add @iconify-json/<icon-set-name>`
-      url: 'https://twitter.com',
+      name: 'X', // Replacing Twitter with X
+      icon: 'fa6-brands:twitter', // Replace with the correct icon code for X if needed
+      url: 'https://x.com/shahriaarrr',
     },
     {
-      name: 'Steam',
-      icon: 'fa6-brands:steam',
-      url: 'https://store.steampowered.com',
+      name: 'YouTube',
+      icon: 'fa6-brands:youtube',
+      url: 'https://www.youtube.com/@shahriaarrr', // Change to your YouTube channel URL
+    },
+    {
+      name: 'LinkedIn',
+      icon: 'fa6-brands:linkedin',
+      url: 'https://www.linkedin.com/in/shahriaarrr', // Change to your LinkedIn profile URL
+    },
+    {
+      name: 'Telegram Channel',
+      icon: 'fa6-brands:telegram',
+      url: 'https://t.me/shahriaarrr12', // Change to your Telegram URL
+    },
+    {
+      name: 'Website',
+      icon: 'fa6-solid:globe', // A globe icon to represent your website
+      url: 'https://shahriaarrr.ir', // Replace with your actual website URL
     },
     {
       name: 'GitHub',
       icon: 'fa6-brands:github',
-      url: 'https://github.com/saicaca/fuwari',
+      url: 'https://github.com/saicaca/shahriaarrr',
     },
   ],
 }
