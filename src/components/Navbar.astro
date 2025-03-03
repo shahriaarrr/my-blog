@@ -23,26 +23,26 @@ let links: NavBarLink[] = navBarConfig.links.map(
     <div class="absolute h-8 left-0 right-0 -top-8 bg-[var(--card-bg)] transition"></div> <!-- used for onload animation -->
     <div class:list={[
         className,
-        "card-base !overflow-visible max-w-[var(--page-width)] h-[4.5rem] !rounded-t-none mx-auto flex items-center justify-between px-4"]}>
+        "card-base !overflow-visible max-w-[var(--page-width)] h-[4.5rem] !rounded-t-none mx-auto flex items-center justify-between px-4 flex-row-reverse text-right"]}>
         <a href={url('/')} class="btn-plain scale-animation rounded-lg h-[3.25rem] px-5 font-bold active:scale-95">
-            <div class="flex flex-row text-[var(--primary)] items-center text-md">
-                <Icon name="material-symbols:home-outline-rounded" class="text-[1.75rem] mb-1 mr-2" />
+            <div class="flex flex-row-reverse text-[var(--primary)] items-center text-md">
+                <Icon name="material-symbols:home-outline-rounded" class="text-[1.75rem] mb-1 ml-2" />
                 {siteConfig.title}
             </div>
         </a>
-        <div class="hidden md:flex">
+        <div class="hidden md:flex flex-row-reverse">
             {links.map((l) => {
                 return <a aria-label={l.name} href={l.external ? l.url : url(l.url)} target={l.external ? "_blank" : null}
                           class="btn-plain scale-animation rounded-lg h-11 font-bold px-5 active:scale-95"
                 >
-                    <div class="flex items-center">
+                    <div class="flex items-center flex-row-reverse">
                         {l.name}
                         {l.external && <Icon name="fa6-solid:arrow-up-right-from-square" class="text-[0.875rem] transition -translate-y-[1px] ml-1 text-black/[0.2] dark:text-white/[0.2]"></Icon>}
                     </div>
                 </a>;
             })}
         </div>
-        <div class="flex">
+        <div class="flex flex-row-reverse">
             <!--<SearchPanel client:load>-->
             <Search client:only="svelte"></Search>
             {!siteConfig.themeColor.fixed && (
@@ -114,4 +114,4 @@ async function loadPagefind() {
     pagefind.search('')     // speed up the first search
 }
 loadPagefind()
-</script>}
+</script>
