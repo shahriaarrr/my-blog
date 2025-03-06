@@ -18,9 +18,9 @@ const { published, updated, tags, category, hideTagsForMobile = false, hideUpdat
 const className = Astro.props.class
 ---
 
-<div class:list={["flex flex-wrap text-neutral-500 dark:text-neutral-400 items-center gap-4 gap-x-4 gap-y-2 flex-row-reverse text-right", className]}>
+<div class:list={["flex flex-wrap text-neutral-500 dark:text-neutral-400 items-center gap-4 gap-x-4 gap-y-2 flex-row text-right", className]}>
     <!-- publish date -->
-    <div class="flex items-center flex-row-reverse">
+    <div class="flex items-center flex-row">
         <div class="meta-icon ml-2">
             <Icon name="material-symbols:calendar-today-outline-rounded" class="text-xl"></Icon>
         </div>
@@ -29,7 +29,7 @@ const className = Astro.props.class
 
     <!-- update date -->
     {!hideUpdateDate && updated && updated.getTime() !== published.getTime() && (
-        <div class="flex items-center flex-row-reverse">
+        <div class="flex items-center flex-row">
             <div class="meta-icon ml-2">
                 <Icon name="material-symbols:edit-calendar-outline-rounded" class="text-xl"></Icon>
             </div>
@@ -38,11 +38,11 @@ const className = Astro.props.class
     )}
 
     <!-- categories -->
-    <div class="flex items-center flex-row-reverse">
+    <div class="flex items-center flex-row">
         <div class="meta-icon ml-2">
             <Icon name="material-symbols:book-2-outline-rounded" class="text-xl"></Icon>
         </div>
-        <div class="flex flex-row-reverse flex-nowrap items-center">
+        <div class="flex flex-row flex-nowrap items-center">
             <a href={url(`/archive/category/${category || 'uncategorized'}/`)} aria-label={`View all posts in the ${category} category`}
                class="link-lg transition text-50 text-sm font-medium
                             hover:text-[var(--primary)] dark:hover:text-[var(--primary)] whitespace-nowrap">
@@ -52,11 +52,11 @@ const className = Astro.props.class
     </div>
 
     <!-- tags -->
-    <div class:list={["items-center flex-row-reverse", {"flex": !hideTagsForMobile, "hidden md:flex": hideTagsForMobile}]}>
+    <div class:list={["items-center flex-row", {"flex": !hideTagsForMobile, "hidden md:flex": hideTagsForMobile}]}>
         <div class="meta-icon ml-2">
             <Icon name="material-symbols:tag-rounded" class="text-xl"></Icon>
         </div>
-        <div class="flex flex-row-reverse flex-nowrap items-center">
+        <div class="flex flex-row flex-nowrap items-center">
             {(tags && tags.length > 0) && tags.map((tag, i) => (
                 <div class:list={[{"hidden": i == 0}, "mx-1.5 text-[var(--meta-divider)] text-sm"]}>/</div>
                 <a href={url(`/archive/tag/${tag}/`)} aria-label={`View all posts with the ${tag} tag`}
