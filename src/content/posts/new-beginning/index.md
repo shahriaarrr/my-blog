@@ -3,7 +3,7 @@ title: غروب پنجشنبه - 21 فروردین 1404
 published: 2025-04-10
 description: 'در مسیر آغازی دوباره قرار دارم....'
 image: './cover.png'
-tags: [وبلاگ, دلنوشته, دنیای من]
+tags: [tasky, وبلاگ, دلنوشته, دنیای من]
 category: غروب پنجشنبه
 draft: false 
 ---
